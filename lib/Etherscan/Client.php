@@ -74,6 +74,9 @@ class Client
             case 'websocket':
                 $api = new Api\Websocket($this);
                 break;
+            case 'gastracker':
+                $api = new Api\GasTracker($this);
+                break;
             default:
                 throw new InvalidArgumentException(sprintf('Undefined api instance called: "%s"', $name));
         }
